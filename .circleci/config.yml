@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: alpine:3.9
+    working_directory: .
+    steps:
+      - checkout
+      - run: 
+          name: Download hugo
+          command: curl -OL https://github.com/gohugoio/hugo/releases/download/hugo_0.54.0_Linux-64bit.tar.gz
+      - run:
+          name: Test Hugo
+          command: ./hugo version
