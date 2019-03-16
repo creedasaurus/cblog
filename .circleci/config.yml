@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: alpine:3.9
-    working_directory: /
+    working_directory: /app
     steps:
       - checkout
       - run: 

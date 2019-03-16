@@ -1,0 +1,10 @@
+dist: xenial
+
+addons:
+  snaps:
+    - name: hugo
+      channel: extended
+
+script:
+  - hugo version
+
